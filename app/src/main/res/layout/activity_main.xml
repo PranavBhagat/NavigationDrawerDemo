@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Below i added XMLNS (XML NAME SPACE) res-auto for adding custom Drawer to layout in activitymain in 6th line-->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.navigationdrawerdemo.MainActivity"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorYellow">
+
+  <!--  Linear Layout is the First Child and represent the main layout of the activity-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+<!--
+This is to Include the toolbar which we created in toolbar.xml in this main activity-->
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/toolbar"
+            />
+
+    </LinearLayout>
+
+   <!-- This Frame layout is for showing the Fragment on the Layout below-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_container">
+
+    </FrameLayout>
+
+   <!-- NavigationView represent that we are adding a Navbar to the Drawer layout and how it will look (2ND CHILD):-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="start"
+
+        android:background="@color/colorGreen"
+
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/navigation_drawer_header"
+        >
+         <!--To add the Navigation to be dragged from left side we use layout Gravity above :-->
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

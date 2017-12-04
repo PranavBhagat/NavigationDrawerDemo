@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--This is for making the list of drawer menu-->
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/home_id"
+            android:title="Home"
+            android:icon="@drawable/ic_home_black_24dp"
+            >
+        </item>
+
+        <item android:id="@+id/message_id"
+            android:title="Message"
+            android:icon="@drawable/ic_message_black_24dp">
+        </item>
+        <item android:id="@+id/setting_id"
+            android:title="Setting"
+            android:icon="@drawable/ic_build_black_24dp">
+        </item>
+    </group>
+
+<!--
+    Below is a Sub-group or sub menu which is divided by a small line
+-->
+    <item android:title="Social"
+        >
+        <menu>
+            <item
+                android:id="@+id/addtogroup_id"
+                android:title="Add to Group"
+                android:icon="@drawable/ic_person_add_black_24dp"></item>
+
+            <item
+                android:id="@+id/group_id"
+                android:title="Group"
+                android:icon="@drawable/ic_group_black_24dp"></item>
+
+            <item
+                android:id="@+id/share_id"
+                android:title="Share"
+                android:icon="@drawable/ic_share_black_24dp"></item>
+
+        </menu>
+    </item>
+</menu>
